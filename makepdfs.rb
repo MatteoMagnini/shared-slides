@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # --disable-web-security does not seem to work anymore since Chrome 111
 command_base = %{
+    DBUS_SESSION_BUS_ADDRESS=/dev/null
     google-chrome-stable
         --headless
         --run-all-compositor-stages-before-draw

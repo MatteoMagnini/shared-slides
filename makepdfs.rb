@@ -9,6 +9,7 @@ command_base = %{
         --virtual-time-budget=1000000
         --disable-audio-output
         --incognito
+        --no-sandbox
         --print-to-pdf=
 }.gsub(/\s+/, " ").strip
 command_end = '?print-pdf&pdfSeparateFragments=false'

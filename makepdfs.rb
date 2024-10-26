@@ -20,7 +20,7 @@ puts "Detected remote: #{remote}"
 url = remote.match(/^(git@|https:\/\/)github\.com(\/|:)(?<owner>[^\/]+)\/(?<repo>[^\/]+?)(\.git)?$/)
 owner = url[:owner].downcase
 repo = (url[:repo] == "#{owner}.github.io" ? "" : "/#{url[:repo]}").downcase
-repo.sub(/\.github\.io\z/, '').strip
+repo = repo.sub(/\.github\.io\z/, '').strip
 puts "Detected repo: #{owner}/#{repo}"
 files = Dir.glob("#{root}/**/index.html")
 puts "Detected the following HTML roots:"

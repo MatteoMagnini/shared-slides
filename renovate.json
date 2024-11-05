@@ -3,6 +3,7 @@
     "extends": [
         "local>DanySK/renovate-config"
     ],
+    "includeForks": true,
     "regexManagers": [
         {
           "fileMatch": ["^.*\\.md$"],
